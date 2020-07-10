@@ -6,6 +6,8 @@ import {FormsModule} from '@angular/forms';
 import { PanierComponent } from './panier/panier.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { ProductComponent } from './product/product.component';
     AppComponent,
     PanierComponent,
     RegisterComponent,
-    ProductComponent
+    ProductComponent,
+    HomeComponent,
     
   ],
   imports: [
