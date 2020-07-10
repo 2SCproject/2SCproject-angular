@@ -1,44 +1,56 @@
-
-  div.container{
-      position: relative;
-      height:1200px;
-      
-  }
-  
-  button.btn{
-      background-color: #EB5E28;
-      border-color: transparent;
-      color: #CCC5B9;
-  }
-  input.form-control{
-      background-color: transparent;
-      border-color: #EB5E28;
-  }
-  .buy{
-    width: 150px;
+body{
+  background-color:rgba(204, 197, 185, 0.3)
+}
+div.container{
+    position: relative;
+    height:1200px;   
+}
+button.btn{
+    background-color: #EB5E28;
+    border-color: transparent;
     color: #CCC5B9;
-    background-color:#EB5E28 ;
-  }
-  .delete{
-    width: 150px;
-    color:#EB5E28;
-    border-color:#EB5E28;
-  }
-  .card{
-    background-color: #CCC5B9;
-  }
-  .float-right{
-    margin-right: 30px;
-   
-  }
-  .star{
-    margin-top: 60px;
+}
+input.form-control{
+    background-color: transparent;
+    border-color: #EB5E28;
+}
+.buy{
+  width: 150px;
+  color: #CCC5B9;
+  background-color:#EB5E28 ;
+}
+.delete{
+  width: 150px;
+  color:#EB5E28;
+  border-color:#EB5E28;
+}
+.card{
+  background-color: #CCC5B9;
+}
+.float-right{
+  margin-right: 30px;
+}
+.star{
+  margin-top: 60px;
+}
+.checkbox{
+  height: 20px;
+  width: 20px; 
+  margin-left:87%;
+}
+.card-title{
+  margin-top: -6%;
+}
+
+@media screen and (min-width: 770px) {
+  .total{
+    float: right;
+    width: 28%; 
+    margin-left:55%;
+    position: fixed;
+  }}
+
+
+
   
-  }
-  
-  
-  
-  
-    
-   
-  
+ 

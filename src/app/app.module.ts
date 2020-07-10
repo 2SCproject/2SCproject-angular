@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
     RegisterComponent,
     ProductComponent,
     HomeComponent,
+   
     
   ],
   imports: [
