@@ -1,0 +1,50 @@
+
+div.container{
+    background-color:#CCC5B9;
+    position: relative;
+    height:1200px;
+}
+
+button.btn{
+    background-color: #EB5E28;
+    border-color: transparent;
+    color: #CCC5B9;
+}
+input.form-control{
+    background-color: transparent;
+    border-color: #EB5E28;
+}
+button.FB{
+    color:#EB5E28;
+     border-color: #EB5E28;
+     background-color: transparent;
+     
+}
+
+
+  @media screen and (min-width: 770px) {
+    form.login{
+        padding-left:5%;
+        width:50%
+      }
+      .vl {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border-left: 2px solid gray;
+        height: 500px;
+        margin-top: 5%;
+      }
+      form.register{
+        width:50%;
+        position: absolute;
+        left: 50%;
+        top :-10%;
+    }
+    div.container{
+        height: 600px;
+    }
+}
+
+  
+ 

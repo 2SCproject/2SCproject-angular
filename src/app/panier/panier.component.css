@@ -1,0 +1,44 @@
+
+  div.container{
+      position: relative;
+      height:1200px;
+      
+  }
+  
+  button.btn{
+      background-color: #EB5E28;
+      border-color: transparent;
+      color: #CCC5B9;
+  }
+  input.form-control{
+      background-color: transparent;
+      border-color: #EB5E28;
+  }
+  .buy{
+    width: 150px;
+    color: #CCC5B9;
+    background-color:#EB5E28 ;
+  }
+  .delete{
+    width: 150px;
+    color:#EB5E28;
+    border-color:#EB5E28;
+  }
+  .card{
+    background-color: #CCC5B9;
+  }
+  .float-right{
+    margin-right: 30px;
+   
+  }
+  .star{
+    margin-top: 60px;
+  
+  }
+  
+  
+  
+  
+    
+   
+  
