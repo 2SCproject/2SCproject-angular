@@ -7,10 +7,12 @@ import { ProductComponent } from './product/product.component';
 
 
 
-const routes: Routes = [{path:'card',component: PanierComponent},
-                        {path:'login',component:RegisterComponent},
-                        {path:'product',component:ProductComponent},
-                        ];
+const routes: Routes = [
+                       {
+                       path: '', loadChildren: './home/home.module#HomeModule'
+                      },
+                      
+                      ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
