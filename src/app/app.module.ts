@@ -6,8 +6,6 @@ import {FormsModule} from '@angular/forms';
 import { PanierComponent } from './panier/panier.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
-import { HomeComponent } from './home/home.component';
-
 
 
 @NgModule({
@@ -16,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     PanierComponent,
     RegisterComponent,
     ProductComponent,
-    HomeComponent,
+
+    
    
     
   ],
