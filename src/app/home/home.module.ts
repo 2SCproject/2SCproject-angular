@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeRoutingModule } from '../home/home-routing.module';
+import {FormsModule} from '@angular/forms';
 import {HomeComponent} from './home.component';
 import { EssaiComponent } from '../essai/essai.component';
 import { Essai2Component } from './essai2/essai2.component';
@@ -26,6 +27,7 @@ import { ProductComponent } from '../product/product.component';
     HomeRoutingModule,
     CommonModule,
     RouterModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
