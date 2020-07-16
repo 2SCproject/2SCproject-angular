@@ -13,8 +13,9 @@ import { ProductComponent } from '../product/product.component';
                               {path: 'home/essai', component: EssaiComponent}
                             ]
                           },
+                          {path:"login",component:RegisterComponent},
                           {path:'card',component: PanierComponent},
-                          {path:'login',component:RegisterComponent},
+                         
                           {path:'product',component:ProductComponent},
                       
                         ];
