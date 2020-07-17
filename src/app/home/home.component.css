@@ -53,3 +53,39 @@ font-family: sans-serif;
 font-size: 16px;
 color: black;
 }
+
+/*Navbar */
+
+body{
+  background-color: #EBEBEB;
+}
+.navbar {
+ 
+  position:absolute;
+  top: 25px;;
+  z-index:10;
+  background:transparent;
+  width:100%;
+}
+
+.navbar-brand{
+  margin-left: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  color: coral;
+}
+
+
+
+.nav-item{
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.navbar li a:hover{
+  color: coral;
+}
+
+.navbar li a {
+ color: black;
+}
