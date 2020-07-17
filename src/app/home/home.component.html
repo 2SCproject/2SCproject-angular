@@ -28,7 +28,7 @@
       <a class="nav-link" href="#">News</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Promotion</a>
+      <a  class="nav-link" href="#">Promotion</a>
     </li>
 
     <!-- Dropdown -->
@@ -55,13 +55,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
+        <a routerLink="/card" class="nav-link waves-effect waves-light">
           <i class="fa fa-shopping-basket"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-effect waves-light">
-          <i class="fa fa-user"></i>
+          <i  class="fa fa-user"></i>
         </a>
       </li>
     
@@ -72,7 +72,7 @@
 <!-- Slideshow -->
 <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <p id="titre-carousel"> <strong>FEEL THE COMFORT USING OUR PRODUCT</strong> </p>
+  <p  id="titre-carousel"> <strong>FEEL THE COMFORT USING OUR PRODUCT</strong> </p>
   <p id="content-carousel">La décoration d'intérieur comme d'extérieur est primordiale<br> 
     lorsque l'on s'installe dans un nouveau logement. C'est elle <br>
     qui va vous permettre de vous sentir comme chez vous. Chaque <br>
@@ -115,8 +115,8 @@
 
     <div  class="col-2 " >
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="#">Promotion</a></li>
-        <li role="presentation"><a href="#">News</a></li>
+        <li  role="presentation" class="active"><a  routerLink="/promotion">Promotion</a></li>
+        <li role="presentation"><a routerLink="">News</a></li>
         <li role="presentation"><a href="#">Popular</a></li>
         <li role="presentation"><a href="#">Category1</a></li>
         <li role="presentation"><a href="#">Category2</a></li>
@@ -128,7 +128,7 @@
     
     <div class="col-10 ">
      
-      
+      <router-outlet></router-outlet>
 
    </div>
 
@@ -230,4 +230,4 @@
 
 
 </body>
-<router-outlet></router-outlet>
+

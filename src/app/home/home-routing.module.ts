@@ -6,11 +6,16 @@ import { Essai2Component } from './essai2/essai2.component';
 import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
+import{NewsComponent} from  './news/news.component';
+import{PromotionComponent} from  './promotion/promotion.component';
+
 
 
  const routes: Routes = [{ path: '', component: HomeComponent, children: [
                               {path: 'essai2', component: Essai2Component},
-                              {path: 'home/essai', component: EssaiComponent}
+                              {path: 'home/essai', component: EssaiComponent},
+                              {path: '', component: NewsComponent},
+                              {path: 'promotion', component: PromotionComponent}
                             ]
                           },
                           {path:"login",component:RegisterComponent},

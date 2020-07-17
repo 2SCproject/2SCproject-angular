@@ -10,6 +10,8 @@ import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
 import { NewsComponent } from './news/news.component';
+import { PromotionComponent } from './promotion/promotion.component';
+import { PopularComponent } from './popular/popular.component';
 
 
 
@@ -22,7 +24,9 @@ import { NewsComponent } from './news/news.component';
     ProductComponent,
     EssaiComponent,
     Essai2Component,
-    NewsComponent
+    NewsComponent,
+    PromotionComponent,
+    PopularComponent
 
   ],
   imports: [
