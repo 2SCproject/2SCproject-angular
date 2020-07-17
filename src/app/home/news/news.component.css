@@ -1,0 +1,39 @@
+
+
+.container h2{
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card{
+  max-height: 320px;
+  margin: 10px;
+  background-color: #CCC5B9;
+  border-style: none;
+  border-radius: 0%;
+}
+.float-right{
+  margin-right: 90px;
+ 
+}
+
+.card-title{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-body{
+  margin-top: -15px;
+ font-size: 12px;
+ font-family: sans-serif;
+   
+}
+
+.star{
+  margin-top: -12px;
+}

@@ -9,6 +9,7 @@ import { Essai2Component } from './essai2/essai2.component';
 import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
+import { NewsComponent } from './news/news.component';
 
 
 
@@ -20,7 +21,8 @@ import { ProductComponent } from '../product/product.component';
     RegisterComponent,
     ProductComponent,
     EssaiComponent,
-    Essai2Component
+    Essai2Component,
+    NewsComponent
 
   ],
   imports: [

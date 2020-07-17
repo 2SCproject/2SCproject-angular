@@ -89,3 +89,47 @@ body{
 .navbar li a {
  color: black;
 }
+
+/* vertical menu*/
+
+.nav-tabs{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+ 
+}
+
+.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+.nav-tabs > li {
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    list-style-type: none;
+}
+.nav-tabs > li > a {
+
+  display: block;
+  padding: 10px 0px;
+  font-size: 12px;
+  font-weight: bolder;
+  background-color:transparent;
+  color: black;
+}
+
+.nav-tabs > li > a:hover {
+color: coral;
+text-decoration: none;
+}
