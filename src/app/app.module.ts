@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { HomeModule } from './home/home.module';
+import { OrderComponent } from './order/order.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    OrderComponent,
   
   
     

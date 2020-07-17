@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home.component';
 import { EssaiComponent } from '../essai/essai.component';
-import { Essai2Component } from './essai2/essai2.component';
 import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
 import{NewsComponent} from  './news/news.component';
 import{PromotionComponent} from  './promotion/promotion.component';
+import { OrderComponent } from '../order/order.component';
+
 
 
 
  const routes: Routes = [{ path: '', component: HomeComponent, children: [
-                              {path: 'essai2', component: Essai2Component},
                               {path: 'home/essai', component: EssaiComponent},
                               {path: '', component: NewsComponent},
                               {path: 'promotion', component: PromotionComponent}
@@ -22,6 +22,7 @@ import{PromotionComponent} from  './promotion/promotion.component';
                           {path:'card',component: PanierComponent},
                          
                           {path:'product',component:ProductComponent},
+                          {path:'order',component:OrderComponent},
                       
                         ];
 

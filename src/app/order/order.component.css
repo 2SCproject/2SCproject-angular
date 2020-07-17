@@ -1,0 +1,33 @@
+body {
+  background-color: #EBEBEB;
+}
+h4{
+  color: coral;
+}
+#total{
+  color: coral;
+}
+
+ input:focus{
+  border-color:coral;
+  background-color: #EBEBEB;
+}
+
+input ,select{
+  background-color: #EBEBEB;
+  border-color: darkgray;
+}
+
+/*
+select > option:focus { 
+
+background-color: coral;
+}
+*/
+
+
+.btn  { 
+  float: right;
+  max-width: 150px;
+  color: #EBEBEB;
+  background-color: coral;}
