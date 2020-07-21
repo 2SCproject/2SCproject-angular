@@ -60,6 +60,7 @@ color: black;
 
 body{
   background-color: #EBEBEB;
+  
 }
 .navbar {
  
@@ -92,10 +93,9 @@ body{
  color: black;
 }
 
-.dropdown-menu{
-  margin-left: 1310px;
-  margin-top: 0px;
-}
+
+
+
 
 /* vertical menu*/
 
