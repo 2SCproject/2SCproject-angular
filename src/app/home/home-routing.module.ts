@@ -8,6 +8,8 @@ import { ProductComponent } from '../product/product.component';
 import{NewsComponent} from  './news/news.component';
 import{PromotionComponent} from  './promotion/promotion.component';
 import { OrderComponent } from '../order/order.component';
+import { ProfileComponent } from '../profile/profile.component';
+
 
 
 
@@ -23,6 +25,7 @@ import { OrderComponent } from '../order/order.component';
                          
                           {path:'product',component:ProductComponent},
                           {path:'order',component:OrderComponent},
+                          {path:'profile',component:ProfileComponent}
                       
                         ];
 
