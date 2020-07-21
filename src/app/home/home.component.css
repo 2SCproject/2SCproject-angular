@@ -56,10 +56,6 @@ color: black;
 }
 
 
-
-
-
-
 /*Navbar */
 
 body{
@@ -94,6 +90,11 @@ body{
 
 .navbar li a {
  color: black;
+}
+
+.dropdown-menu{
+  margin-left: 1310px;
+  margin-top: 0px;
 }
 
 /* vertical menu*/
