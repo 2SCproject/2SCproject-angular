@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { OrderComponent } from './order/order.component';
-import { ProfileComponent } from './profile/profile.component';
+
 
 
 
@@ -13,10 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     AppComponent,
     OrderComponent,
-    ProfileComponent,
-  
-  
-    
+   
   ],
   imports: [
     BrowserModule,

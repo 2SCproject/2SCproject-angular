@@ -11,7 +11,7 @@ import { ProductComponent } from '../product/product.component';
 import { NewsComponent } from './news/news.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { PopularComponent } from './popular/popular.component';
-
+import { ProfileModule } from '../profile/profile.module';
 
 
 
@@ -31,7 +31,8 @@ import { PopularComponent } from './popular/popular.component';
     HomeRoutingModule,
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ProfileModule
   ]
 })
 export class HomeModule { }

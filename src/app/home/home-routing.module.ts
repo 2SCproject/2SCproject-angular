@@ -20,12 +20,15 @@ import { ProfileComponent } from '../profile/profile.component';
                               {path: 'promotion', component: PromotionComponent}
                             ]
                           },
+                          {
+                            path: 'profile', loadChildren: '../profile/profile.module#ProfileModule'
+                           },
                           {path:"login",component:RegisterComponent},
                           {path:'card',component: PanierComponent},
                          
                           {path:'product',component:ProductComponent},
                           {path:'order',component:OrderComponent},
-                          {path:'profile',component:ProfileComponent}
+                         
                       
                         ];
 
