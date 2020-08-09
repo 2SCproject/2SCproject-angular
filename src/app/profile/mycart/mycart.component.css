@@ -1,0 +1,56 @@
+/* table*/
+
+.table{
+  width: 800px;
+  background-color:#E2E0DD ;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
+
+.min{
+  height: 60px;
+  width: 60px;
+}
+
+/* card*/
+.card{
+  background-color: #E2E0DD;
+  width: 750px;
+  
+}
+
+.buy{
+  width: 100px;
+  color: #CCC5B9;
+  background-color:#EB5E28 ;
+  margin: 5px;
+}
+.delete{
+  width: 100px;
+  color:#EB5E28;
+  border-color:#EB5E28;
+  margin: 5px;
+}
+.order{
+  width: 150px;
+  color: #CCC5B9;
+  background-color:#EB5E28 ;
+  margin-bottom: 15px;
+  margin-right: 150px;
+  float: right;
+}
+.float-right{
+  margin-right: 30px;
+}
+
+.star{
+  margin-top: 60px;
+}
+.checkbox{
+  height: 20px;
+  width: 20px; 
+  margin-left:87%;
+}
+
