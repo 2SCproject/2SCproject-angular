@@ -6,16 +6,23 @@
     </div>
     <div class="col-md-10 ">
 
-      <div id="D">
-        <h5>Username</h5>
-        <p >edit</p>
-        <h6>timocha</h6>
-        
-          
-      </div>
+
 
     
+      <div id="D">
+        <h5>Username</h5>
+        <p (click)="edit()">edit</p>
+        <h6 *ngIf="val ; else notVal">timocha</h6>
+        <ng-template  #notVal> 
+
+          <input style="width: 300px; background-color: transparent;" type="text" id="name" name="name" 
+       minlength="4" maxlength="8" size="10">
+       <button  type="submit" class="btn">save</button>
      
+
+        </ng-template>
+          
+      </div>
 
     </div>
 
