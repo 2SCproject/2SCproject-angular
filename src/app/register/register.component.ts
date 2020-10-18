@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from '../user'
+import{RegisterService} from '../service/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -6,14 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor() { }
+users=[];
+constructor(private router:Router,private l:RegisterService) { };
 
   ngOnInit(): void {
   }
-  public mavar="";
-  public mavar2="";
-  public mavar0="";
-  public mavar3="";
+  public username="";
+  public email="";
+  public password="";
+  public confirmpassword="";
+  OnSubmitAddUsers(user : User){
+    console.log(user);
+    this.l.addUser(user)
+             .subscribe(resnextCour=>this.users.push(resnextCour));
+             this.router.navigate(['/profile']);
+             
+  }
 
-}
+  }
+
+

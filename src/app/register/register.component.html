@@ -1,120 +1,161 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">LOGO</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <a class="navbar-brand" href="#">LOGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">NEWS</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CATEGORY
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">SHOP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">SERVICES</a>
+      </li>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">NEWS</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CATEGORY
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">SHOP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">SERVICES</a>
-        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" routerLink="/card">
+          <i class="fa fa-shopping-basket"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" >
+          <i class="fa fa-user"></i>
+        </a>
+      </li>
     
-      </ul>
-      <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" routerLink="/card">
-            <i class="fa fa-shopping-basket"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" >
-            <i class="fa fa-user"></i>
-          </a>
-        </li>
-      
-      </ul>
-    </div>
-  </nav>
-  <!--login -->
-  <div class="container">
-    <div class="vl"></div>
-    <form  class="login " style="margin:5%">
-      <h1  style="padding-top:5%;padding-left:10%;">connexion:</h1>
-      <div class="form-row">
-        <div class="form-group  col-md-8 ">
-          <label style="color:#EB5E28">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <div class="form-group col-md-8">
-          <label for="inputPassword4" style="color:#EB5E28">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-        </div>
-      <button  type="submit" class="btn  col-md-8">Sign in</button>
-      <div style="color:#EB5E28; padding-left: 15%;" class="  col-md-12">  Forget your password?</div>
-    <br>
-   <br><div style="float:left; width: 30%;"><hr/></div>OR
-   <div style="float:right; width: 30%;"><hr/></div>
-  
-        <br><br><br>
-    <button class="btn FB col-md-8"><i class="fa fa-facebook fa-fw"></i> Login with Facebook</button>
-    <button class="btn FB col-md-8"><i class="fa fa-google fa-fw"></i> Login with Google+</button>
-        
-    </div>
-  </form>
-  <!--registration-->
-  <form #myform="ngForm" class="register" style="margin:5%;float:right;">
-    <h1  style="padding-top:5%;padding-left:10%;">New Client:</h1>
+    </ul>
+  </div>
+</nav>
+<!--login -->
+<div class="container">
+  <div class="vl"></div>
+  <form  class="login " style="margin:5%">
+    <h1  style="padding-top:5%;padding-left:10%;">connexion:</h1>
     <div class="form-row">
-      <div class="form-group col-md-8">
-        <label style="color:#EB5E28">Username</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Username" name="user" [(ngModel)]="mavar0" #user="ngModel" minlength="4" required>
-        <div *ngIf="user.errors && (user.invalid || user.untouched)">
-          <small class="text-danger" *ngIf="user.errors.required">this field is required</small> 
-          <small class="text-danger" *ngIf="user.errors.minlength">too short!!</small>   
-         </div>
-      </div>
-      <div class="form-group col-md-8">
+      <div class="form-group  col-md-8 ">
         <label style="color:#EB5E28">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="mail" [(ngModel)]="mavar" #mail="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-        <div *ngIf="mail.errors && (mail.invalid || mail.untouched)">
-          <small class="text-danger" *ngIf="mail.errors.required">this field is required</small> 
-          <small class="text-danger" *ngIf="mail.errors.pattern">this field must contain a valid email</small>  
-         </div>
+        <input type="email" class="form-control" id="inputEmaillogin" placeholder="Email">
       </div>
-      
       <div class="form-group col-md-8">
         <label for="inputPassword4" style="color:#EB5E28">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="pwd" [(ngModel)]="mavar2" #pwd="ngModel" minlength="8"  required>
-        <div *ngIf="pwd.errors && (pwd.invalid || pwd.untouched)">
-          <small class="text-danger" *ngIf="pwd.errors.required">this field is required</small> 
-          <small class="text-danger" *ngIf="pwd.errors.minlength">too short!!</small>   
-         </div>
+        <input type="password" class="form-control" id="inputPasswordlogin" placeholder="Password">
       </div>
-      <div class="form-group col-md-8">
-        <label for="inputPassword4" style="color:#EB5E28">Confirm Password:</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="pwdc" [(ngModel)]="mavar3" #pwdc="ngModel" minlength="8"  required >
-        <div *ngIf="pwdc.errors   && (pwdc.invalid || pwdc.untouched)">
-          <small class="text-danger" *ngIf="pwdc.errors.required">this field is required</small>  
-         </div>
-         <div *ngIf="pwdc.valid && pwdc.value!==pwd.value" class="text-danger">
-          <small> Password mismatch </small>   
-         </div>
-      </div>
-    <button  type="submit" class="btn  col-md-8" [disabled]="myform.invalid || pwdc.value!==pwd.value">Register</button>
-  </div>
-  </form>
-  
-       
-      </div>
+    <button  type="submit" class="btn  col-md-8">Sign in</button>
+    <div style="color:#EB5E28; padding-left: 15%;" class="  col-md-12">  Forget your password?</div>
+  <br>
+ <br><div style="float:left; width: 30%;"><hr/></div>OR
+ <div style="float:right; width: 30%;"><hr/></div>
+
+      <br><br><br>
+  <button class="btn FB col-md-8"><i class="fa fa-facebook fa-fw"></i> Login with Facebook</button>
+  <button class="btn FB col-md-8"><i class="fa fa-google fa-fw"></i> Login with Google+</button>
       
+  </div>
+</form>
+<!--registration-->
+<!--<form #myform="ngForm" class="register" style="margin:5%;float:right;" (ngSubmit)="OnSubmitAddUsers(myform.value)">
+  <h1  style="padding-top:5%;padding-left:10%;">New Client:</h1>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <label style="color:#EB5E28">Username</label>
+      <input type="text" class="form-control" id="inputusername" placeholder="Username" name="user" [(ngModel)]="users[username]" #user="ngModel" minlength="4" required>
+      <div *ngIf="user.errors && (user.invalid || user.untouched)">
+        <small class="text-danger" *ngIf="user.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="user.errors.minlength">too short!!</small>   
+       </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label style="color:#EB5E28">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="mail" [(ngModel)]="users[email]" #mail="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+      <div *ngIf="mail.errors && (mail.invalid || mail.untouched)">
+        <small class="text-danger" *ngIf="mail.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="mail.errors.pattern">this field must contain a valid email</small>  
+       </div>
+    </div>
+    
+    <div class="form-group col-md-8">
+      <label for="inputPassword" style="color:#EB5E28">Password</label>
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pwd" [(ngModel)]="users[password]" #pwd="ngModel" minlength="8"  required>
+      <div *ngIf="pwd.errors && (pwd.invalid || pwd.untouched)">
+        <small class="text-danger" *ngIf="pwd.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="pwd.errors.minlength">too short!!</small>   
+       </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputconfirmPassword" style="color:#EB5E28">Confirm Password:</label>
+      <input type="password" class="form-control" id="inputconfirmPassword" placeholder="Password" name="pwdc" [(ngModel)]="users[confirmpassword]" #pwdc="ngModel" minlength="8"  required >
+      <div *ngIf="pwdc.errors   && (pwdc.invalid || pwdc.untouched)">
+        <small class="text-danger" *ngIf="pwdc.errors.required">this field is required</small>  
+       </div>
+       <div *ngIf="pwdc.valid && pwdc.value!==pwd.value" class="text-danger">
+        <small> Password mismatch </small>   
+       </div>
+    </div>
+  <button  type="submit" class="btn  col-md-8" [disabled]="myform.invalid || pwdc.value!==pwd.value" routerLink="/profile">Register</button>
+</div>
+</form>-->
+<form #myform="ngForm" class="register" style="margin:5%;float:right;" (ngSubmit)="OnSubmitAddUsers(myform.value)" >
+  <h1  style="padding-top:5%;padding-left:10%;">New Client:</h1>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <label style="color:#EB5E28">Username</label>
+      <input type="text" class="form-control" id="inputusername" placeholder="Username" name="username" [(ngModel)]="username" #user="ngModel" minlength="4" required>
+      <div *ngIf="user.errors && (user.invalid || user.untouched)">
+        <small class="text-danger" *ngIf="user.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="user.errors.minlength">too short!!</small>   
+       </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label style="color:#EB5E28">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email" [(ngModel)]="email" #mail="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+      <div *ngIf="mail.errors && (mail.invalid || mail.untouched)">
+        <small class="text-danger" *ngIf="mail.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="mail.errors.pattern">this field must contain a valid email</small>  
+       </div>
+    </div>
+    
+    <div class="form-group col-md-8">
+      <label for="inputconfirmPassword4" style="color:#EB5E28">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="password" [(ngModel)]="password" #pwd="ngModel" minlength="8"  required>
+      <div *ngIf="pwd.errors && (pwd.invalid || pwd.untouched)">
+        <small class="text-danger" *ngIf="pwd.errors.required">this field is required</small> 
+        <small class="text-danger" *ngIf="pwd.errors.minlength">too short!!</small>   
+       </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputconfirmPassword4" style="color:#EB5E28">Confirm Password:</label>
+      <input type="password" class="form-control" id="inputconfirmPassword4" placeholder="Password" name="pwdc" [(ngModel)]="confirmpassword" #pwdc="ngModel" minlength="8"  required >
+      <div *ngIf="pwdc.errors   && (pwdc.invalid || pwdc.untouched)">
+        <small class="text-danger" *ngIf="pwdc.errors.required">this field is required</small>  
+       </div>
+       <div *ngIf="pwdc.valid && pwdc.value!==pwd.value" class="text-danger">
+        <small> Password mismatch </small>   
+       </div>
+    </div>
+  <button  type="submit" class="btn  col-md-8" [disabled]="myform.invalid || pwdc.value!==pwd.value">Register</button>
+</div>
+</form>
+
+     
+    </div>
+    
