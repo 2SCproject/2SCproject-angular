@@ -2,14 +2,59 @@
  <div class="row">
     <div class="col-md-2 ">
     <img src="assets/avatar.png" id="pic"><br>
-    <P id="EPP" style="color: coral;"> change profile picture</P>
+    <P id="EPP"> change profile picture</P>
     </div>
     <div class="col-md-10 ">
 
+       
+      <div class="D">
+        <h6>Username</h6>
+        <button class="edit" type="submit" (click)="editname()">edit</button>
+        <h6 *ngIf="val1 ; else notVal1">timocha</h6>
+        <ng-template #notVal1> 
+          <input class="input"  type="text" id="name" name="name" 
+       minlength="4" maxlength="8" size="10">
+       <button  (click)="savename()" class="btn" >save</button>
+        </ng-template>   
+      </div><br>
+      <div class="D">
+        <h6>Email</h6>
+        <button class="edit" type="submit" (click)="editemail()">edit</button>
+        <h6 *ngIf="val2 ; else notVal2">timocha@gmail.com</h6>
+        <ng-template #notVal2> 
+          <input class="input"  type="email" id="email" name="email">
+       <button  (click)="saveemail()" class="btn" >save</button>
+        </ng-template>   
+      </div><br>
 
+      <div class="D">
+        <h6>Password</h6>
+        <button class="edit" type="submit" (click)="editpassword()">edit</button>
+        <h6 *ngIf="val3 ; else notVal3">*********</h6>
+        <ng-template #notVal3> 
+          <input class="input"  type="password" id="password" name="password">
+       <button  (click)="savepassword()" class="btn" >save</button>
+        </ng-template>   
+      </div><br>
+      <div class="D">
+        <h6>Phone</h6>
+        <button class="edit" type="submit" (click)="editphone()">edit</button>
+        <h6 *ngIf="val4; else notVal4">+123456789</h6>
+        <ng-template #notVal4> 
+          <input class="input"  type="text" id="phone" name="phone">
+       <button  (click)="savephone()" class="btn" >save</button>
+        </ng-template>   
+      </div><br>
+      <div class="D">
+        <h6>Adress</h6>
+        <button class="edit" type="submit" (click)="editadress()">edit</button>
+        <h6 *ngIf="val5 ; else notVal5">Adress</h6>
+        <ng-template #notVal5> 
+          <input class="input"  type="text" id="adress" name="adress">
+       <button  (click)="saveadress()" class="btn" >save</button>
+        </ng-template>   
+      </div><br>
 
-    
-     
 
     </div>
 
