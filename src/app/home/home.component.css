@@ -141,6 +141,11 @@ color: coral;
 text-decoration: none;
 }
 
+.nav-tabs > li > a:active {
+  color: coral;
+  text-decoration: none;
+  }
+
 /* pagination */
 
 .pagination{
