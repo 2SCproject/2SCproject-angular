@@ -19,9 +19,16 @@ export class RegisterService {
     let options = {
         headers:headers
     }
-    return this.http.post<User[]>("httpS://1b1706acaa8d.ngrok.io/ms-auth/register",JSON.stringify(user),options)
+    return this.http.post<User[]>("http://localhost:7777//ms-auth/register",JSON.stringify(user),options)
     .pipe(
         map(response=>response)
-    ); 
+    );   
+}
+login(login:String){
+  return this.http.get<User>("http://localhost:7777//ms-auth/user/"+login)
+  .pipe(
+    map(response=>response)
+   );
+
 }
 }

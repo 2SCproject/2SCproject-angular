@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { OrderComponent } from './order/order.component';
 import{RegisterService} from './service/register.service';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -23,7 +24,8 @@ import{RegisterService} from './service/register.service';
     AppRoutingModule,
     HomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
     
   ],
   providers: [RegisterService],
