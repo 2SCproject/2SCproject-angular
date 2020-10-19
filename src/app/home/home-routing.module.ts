@@ -9,6 +9,7 @@ import{NewsComponent} from  './news/news.component';
 import{PromotionComponent} from  './promotion/promotion.component';
 import { OrderComponent } from '../order/order.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { PopularComponent } from './popular/popular.component';
 
 
 
@@ -16,8 +17,10 @@ import { ProfileComponent } from '../profile/profile.component';
 
  const routes: Routes = [{ path: '', component: HomeComponent, children: [
                               {path: 'home/essai', component: EssaiComponent},
-                              {path: '', component: NewsComponent},
-                              {path: 'promotion', component: PromotionComponent}
+                              {path: '', component: PopularComponent},
+                              {path: 'promotion', component: PromotionComponent},
+                              {path: 'news', component: NewsComponent},
+
                             ]
                           },
                           {
