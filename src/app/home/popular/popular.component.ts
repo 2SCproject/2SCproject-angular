@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {SerService} from '../ser.service';
-import { Course} from '../course';
+import {InventoryService} from '../../service/inventory.service';
+import { Product} from '../../product';
 
 @Component({
   selector: 'app-popular',
@@ -9,10 +9,12 @@ import { Course} from '../course';
   styleUrls: ['./popular.component.css']
 })
 export class PopularComponent implements OnInit {
+  products: Array<Product>;
 
-  constructor() { }
+  constructor(private router:Router, private s:InventoryService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.s.getProducts().subscribe(resProducts => this.products=resProducts);
   }
 
 }
