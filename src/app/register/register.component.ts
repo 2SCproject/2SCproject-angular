@@ -29,7 +29,6 @@ constructor(private router:Router,private l:RegisterService) { };
              this.router.navigate(['/profile']);
              
   }
-  
 
   }
 
