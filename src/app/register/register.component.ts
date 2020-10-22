@@ -29,19 +29,7 @@ constructor(private router:Router,private l:RegisterService,public toastr:Toastr
              this.router.navigate(['/profile']);
              
   }
-  login(){
-    this.l.login(this.emaill)
-          .subscribe(response=>{this.user=response;
-            if (this.user.psw=this.passwordl){
-              this.router.navigate(["/"]);
-            }else{
-              this.toastr.warning('password incorrect')
-            }
 
-          },error=>
-          this.toastr.warning('login incorrect')
-          ); 
-  }
 
   }
 

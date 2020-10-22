@@ -19,13 +19,13 @@ export class RegisterService {
     let options = {
         headers:headers
     }
-    return this.http.post<User[]>("http://localhost:7777//ms-auth/register",JSON.stringify(user),options)
+    return this.http.post<User[]>("http://localhost:3000/register",JSON.stringify(user),options)
     .pipe(
         map(response=>response)
     );   
 }
 login(login:String){
-  return this.http.get<User>("http://localhost:7777//ms-auth/user/"+login)
+  return this.http.get<User>("http://localhost:3000/user/email/"+login)
   .pipe(
     map(response=>response)
    );
