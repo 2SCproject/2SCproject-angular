@@ -4,6 +4,6 @@ export class Product {
   Image?:string;
   Descreption?:string;
   Mark?:string;
-  Quatity?:string;
+  Quantity?:string;
   Name?:string;
 }

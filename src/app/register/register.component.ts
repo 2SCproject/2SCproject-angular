@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../user'
 import{RegisterService} from '../service/register.service';
-import {ToastrService} from 'ngx-toastr';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 users=[];
-constructor(private router:Router,private l:RegisterService,public toastr:ToastrService) { };
+constructor(private router:Router,private l:RegisterService) { };
 
   ngOnInit(): void {
   }
@@ -29,19 +29,7 @@ constructor(private router:Router,private l:RegisterService,public toastr:Toastr
              this.router.navigate(['/profile']);
              
   }
-  login(){
-    this.l.login(this.emaill)
-          .subscribe(response=>{this.user=response;
-            if (this.user.psw=this.passwordl){
-              this.router.navigate(["/"]);
-            }else{
-              this.toastr.warning('password incorrect')
-            }
-
-          },error=>
-          this.toastr.warning('login incorrect')
-          ); 
-  }
+  
 
   }
 

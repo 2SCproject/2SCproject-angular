@@ -7,7 +7,9 @@ import {FormsModule} from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { OrderComponent } from './order/order.component';
 import{RegisterService} from './service/register.service';
-import { ToastrModule } from 'ngx-toastr';
+import { InventoryService } from './service/inventory.service';
+
+
 
 
 
@@ -25,10 +27,11 @@ import { ToastrModule } from 'ngx-toastr';
     HomeModule,
     FormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+  
     
   ],
-  providers: [RegisterService],
+  providers: [RegisterService,
+  InventoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

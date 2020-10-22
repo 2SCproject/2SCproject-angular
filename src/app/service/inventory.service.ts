@@ -11,8 +11,17 @@ export class InventoryService {
   constructor(private http: HttpClient) { }
   
   getProducts(){
-    return this.http.get<Product[]>("https://686153e50db9.ngrok.io/ms-inventory/products").pipe(
-      map(response=>response)
+    return this.http.get<Product[]>("https://90c7cc4286b7.ngrok.io/ms-inventory/products").pipe(
+      map(response=>response['_embedded'].products)
     );
+  }
+
+
+}
+
+interface products{
+  _embedded:{
+    appUsers:Product[];
+    _links:{self:{href:string}};
   }
 }
