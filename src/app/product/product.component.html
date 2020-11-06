@@ -84,10 +84,10 @@
         <h2 class="card-title" name="name">{{name}}</h2>
         <p class="card-text" name="description"> {{description}}</p>
         <div class="price">
-          <h3 class="float-left" name="price">{{price}}</h3>
+          <h3 class="float-left" name="price">{{price}} $</h3>
           <div class="float-right" >
-            <a href="#" class="btn add " (click)="add_to_card()">ADD TO CARD</a>
-            <a href="#" class="btn buy">BUY NOW</a>
+            <a href="#" class="btn add " (click)="add_to_card()" routerLink="/card">ADD TO CARD</a>
+            <a href="#" class="btn buy" routerLink="/order" (click)="buyproduct()">BUY NOW</a>
           </div>
          </div>
          <br>

@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   public price;
 
 
-  constructor(private route:ActivatedRoute,  private S:InventoryService) { }
+  constructor(private route:ActivatedRoute,private router:Router, private S:InventoryService) { }
 
   ngOnInit(): void {
     var id=this.route.snapshot.paramMap.get('id');
@@ -32,7 +32,10 @@ export class ProductComponent implements OnInit {
 
   }
    add_to_card(){
-   
+  }
+  buyproduct(){
+
+    this.router.navigate(['/order',this.courId])
   }
 
   

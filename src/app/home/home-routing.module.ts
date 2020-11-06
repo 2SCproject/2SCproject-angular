@@ -30,7 +30,7 @@ import { PopularComponent } from './popular/popular.component';
                           {path:'card',component: PanierComponent},
                          
                           {path:'product/:id',component:ProductComponent},
-                          {path:'order',component:OrderComponent},
+                          {path:'order/:id',component:OrderComponent},
                          
                       
                         ];
