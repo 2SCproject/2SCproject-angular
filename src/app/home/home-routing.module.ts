@@ -29,7 +29,7 @@ import { PopularComponent } from './popular/popular.component';
                           {path:"login",component:RegisterComponent},
                           {path:'card',component: PanierComponent},
                          
-                          {path:'product',component:ProductComponent},
+                          {path:'product/:id',component:ProductComponent},
                           {path:'order',component:OrderComponent},
                          
                       

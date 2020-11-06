@@ -81,12 +81,12 @@
       
      <!-- <img src="img5.jpg" style="height:auto;width: 50%;">-->
       <div class="card-body col-sm-6 ">
-        <h2 class="card-title">Excepteur sint occaeuiecat cupidatat.</h2>
-        <p class="card-text"> Excepteur occacat cupidata Entire home/apt, 1 bed</p>
+        <h2 class="card-title" name="name">{{name}}</h2>
+        <p class="card-text" name="description"> {{description}}</p>
         <div class="price">
-          <h3 class="float-left">100$</h3>
+          <h3 class="float-left" name="price">{{price}}</h3>
           <div class="float-right" >
-            <a href="#" class="btn add ">ADD TO CARD</a>
+            <a href="#" class="btn add " (click)="add_to_card()">ADD TO CARD</a>
             <a href="#" class="btn buy">BUY NOW</a>
           </div>
          </div>
