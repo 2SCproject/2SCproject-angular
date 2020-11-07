@@ -21,6 +21,7 @@ export class ProductComponent implements OnInit {
   constructor(private route:ActivatedRoute,private router:Router, private S:InventoryService) { }
   products: Array<Product>;
   ngOnInit(): void {
+    
     var id=this.route.snapshot.paramMap.get('id');
     this.courId=id;
     this.S.getProductById(id)
@@ -28,6 +29,8 @@ export class ProductComponent implements OnInit {
       plusSlides(-1, 0);
       plusSlides(1, 0);
       this.S.getProducts().subscribe(resProducts => this.products=resProducts);
+     
+      
 
   }
    add_to_card(){
@@ -37,9 +40,7 @@ export class ProductComponent implements OnInit {
     this.router.navigate(['/order',this.courId])
   }
   Ongetproduct(p){
-  
-    
-    var id=this.route.snapshot.paramMap.get('id');
+     var id=this.route.snapshot.paramMap.get('id');
     this.courId=id;
      this.S.getProductById(id)
      .subscribe(res=>{this.name=res.name; this.description=res.descreption;this.price=res.price;console.log(res)});
