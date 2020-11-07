@@ -33,15 +33,14 @@
 
     <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" (click)="opencategories()">
         Categories
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Category 1</a>
-        <a class="dropdown-item" href="#">Category 2</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Category 3</a>
-      </div>
+      <div class="dropdown-menu" >
+        <div *ngFor="let c of products">
+          <a class="dropdown-item" >{{c.name}}</a>
+          <div class="dropdown-divider"></div>
+        </div></div>
     </li>
 
     <li class="nav-item">

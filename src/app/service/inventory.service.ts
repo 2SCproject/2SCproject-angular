@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product} from '../product';
+import { Category} from '../category';
 import {map} from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
@@ -15,6 +16,18 @@ export class InventoryService {
       map(response=>response['_embedded'].products)
     );
   }
+  getProductById(id:string){
+    return this.http.get<Product>("http://localhost:8081/products/"+id)
+    .pipe(
+          map(response=>response)
+         );
+
+}
+getCategories(){
+  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
+    map(response=>response['_embedded'].categories)
+  );
+}
 
 
 }

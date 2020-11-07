@@ -29,8 +29,8 @@ import { PopularComponent } from './popular/popular.component';
                           {path:"login",component:RegisterComponent},
                           {path:'card',component: PanierComponent},
                          
-                          {path:'product',component:ProductComponent},
-                          {path:'order',component:OrderComponent},
+                          {path:'product/:id',component:ProductComponent},
+                          {path:'order/:id',component:OrderComponent},
                          
                       
                         ];

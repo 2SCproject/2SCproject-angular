@@ -16,5 +16,12 @@ export class PopularComponent implements OnInit {
   ngOnInit() {
     this.s.getProducts().subscribe(resProducts => this.products=resProducts);
   }
+  Ongetproduct(p){
+    console.log(p.idProduct);
+    console.log("product");
+    console.log(p);
+    
+    this.router.navigate(['/product',p._id])
+  }
 
 }
