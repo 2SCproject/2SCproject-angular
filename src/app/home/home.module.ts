@@ -8,7 +8,6 @@ import { EssaiComponent } from '../essai/essai.component';
 import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
-import { NewsComponent } from './news/news.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { PopularComponent } from './popular/popular.component';
 import { ProfileModule } from '../profile/profile.module';
@@ -22,7 +21,6 @@ import { ProfileModule } from '../profile/profile.module';
     RegisterComponent,
     ProductComponent,
     EssaiComponent,
-    NewsComponent,
     PromotionComponent,
     PopularComponent
 

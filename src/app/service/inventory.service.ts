@@ -29,6 +29,20 @@ getCategories(){
   );
 }
 
+getProductByname(name:string){
+  let headers= new HttpHeaders ({
+   'Content-Type': 'application/json',
+ });
+ let options = {
+   headers:headers
+ }
+  console.log("done");
+  return this.http.get<Product[]>("http://localhost:8081/product/"+name,options)
+   .pipe(
+         map(response=>response)
+        );
+ }
+
 
 }
 

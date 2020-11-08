@@ -5,7 +5,6 @@ import { EssaiComponent } from '../essai/essai.component';
 import { PanierComponent } from '../panier/panier.component';
 import { RegisterComponent } from '../register/register.component';
 import { ProductComponent } from '../product/product.component';
-import{NewsComponent} from  './news/news.component';
 import{PromotionComponent} from  './promotion/promotion.component';
 import { OrderComponent } from '../order/order.component';
 import { ProfileComponent } from '../profile/profile.component';
@@ -19,7 +18,7 @@ import { PopularComponent } from './popular/popular.component';
                               {path: 'home/essai', component: EssaiComponent},
                               {path: '', component: PopularComponent},
                               {path: 'promotion', component: PromotionComponent},
-                              {path: 'news', component: NewsComponent},
+                              
 
                             ]
                           },
