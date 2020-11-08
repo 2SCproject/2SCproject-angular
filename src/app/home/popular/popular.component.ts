@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Router} from '@angular/router';
 import {InventoryService} from '../../service/inventory.service';
 import { Product} from '../../product';
@@ -9,7 +9,9 @@ import { Product} from '../../product';
   styleUrls: ['./popular.component.css']
 })
 export class PopularComponent implements OnInit {
+  @Input() data:string;
   products: Array<Product>;
+  
 
   constructor(private router:Router, private s:InventoryService) { }
 

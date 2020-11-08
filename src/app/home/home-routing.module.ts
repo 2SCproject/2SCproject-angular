@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home.component';
 import { EssaiComponent } from '../essai/essai.component';
@@ -9,6 +9,7 @@ import{PromotionComponent} from  './promotion/promotion.component';
 import { OrderComponent } from '../order/order.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { PopularComponent } from './popular/popular.component';
+import { ProductsearchComponent } from '../productsearch/productsearch.component';
 
 
 
@@ -18,6 +19,7 @@ import { PopularComponent } from './popular/popular.component';
                               {path: 'home/essai', component: EssaiComponent},
                               {path: '', component: PopularComponent},
                               {path: 'promotion', component: PromotionComponent},
+                              {path: 'product/search',component:ProductsearchComponent}
                               
 
                             ]

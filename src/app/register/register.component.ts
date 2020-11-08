@@ -36,6 +36,8 @@ constructor(private router:Router,private l:RegisterService) { };
       let jwt=res.headers.get('Authorization')
       this.l.saveToken(jwt)
     },err=>{})
+    console.log("login")
+    this.router.navigate(['/']);
   }
 
   isAdmin(){
