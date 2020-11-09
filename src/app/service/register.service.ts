@@ -28,7 +28,7 @@ export class RegisterService {
     let options = {
         headers:headers
     }
-    return this.http.post<User[]>("http://localhost:3000/register",JSON.stringify(user),options)
+    return this.http.post<User[]>("https://cb6aec3f490c.ngrok.io/register",JSON.stringify(user),options)
     .pipe(
         map(response=>response)
     );   
@@ -36,12 +36,12 @@ export class RegisterService {
 
 
   getUser(){
-    return this.http.get("http://localhost:3000/user/" + this.username);
+    return this.http.get("https://cb6aec3f490c.ngrok.io/user/" + this.username);
   }
 
 
 public login(data){
-  return this.http.post("http://localhost:3000/login",data,{observe:'response'})
+  return this.http.post("https://cb6aec3f490c.ngrok.io/login",data,{observe:'response'})
 
 }
 public saveToken(jwt:string){
@@ -61,6 +61,7 @@ parseJWT(){
   this.getUser().subscribe(res=>{
     console.log(res)
     this.userAuth=res
+    console.log(this.userAuth)
   })
   this.roles=objJWT.roles
 
