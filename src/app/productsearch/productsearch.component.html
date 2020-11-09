@@ -1,12 +1,12 @@
 
 <h2>Popular</h2>
-<p>{{data}}</p>
+
 <div class="container">
  
    <div class="row">
     
     
-     <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let p of products" (click)="Ongetproduct(p)" routerLink="/product/{{p.idProduct}}">
+     <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let p of products">
        <div id="productBox" class="card" style="width:100%;height: 100%;" >
          <img class="card-img-top" src="assets/4.jpg" alt="Card image" style="width:100%;height: 65%;">
          <div class="card-body">

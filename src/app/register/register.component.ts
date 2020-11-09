@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../user'
 import{RegisterService} from '../service/register.service';
-
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,22 +12,43 @@ export class RegisterComponent implements OnInit {
 users=[];
 constructor(private router:Router,private l:RegisterService) { };
 
+  
   ngOnInit(): void {
+    this.l.loaduserfromlocal()
+
   }
-  user: any;
+  
   public username="";
   public email="";
   public password="";
   public confirmpassword="";
-  public emaill="";
-  public passwordl="";
   OnSubmitAddUsers(user : User){
     console.log(user);
     this.l.addUser(user)
              .subscribe(resnextCour=>this.users.push(resnextCour));
-             this.router.navigate(['/profile']);
-             
+             this.router.navigate(['/profile']);      
   }
+
+  onLogin(dataForm ){
+    this.l.login(dataForm)
+    .subscribe(res=>{
+      console.log(res);
+      let jwt=res.headers.get('Authorization')
+      this.l.saveToken(jwt)
+    },err=>{})
+    console.log("login")
+    this.router.navigate(['/']);
+  }
+
+  isAdmin(){
+    return this.l.isAdmin()
+  }
+
+  isUser(){
+    return this.l.isUser()
+  }
+
+ 
 
   }
 
