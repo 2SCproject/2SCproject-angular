@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Order} from '../../order';
+import {Router} from '@angular/router';
+import {OrdersService} from '../../service/orders.service';
 
 @Component({
   selector: 'app-myorders',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyordersComponent implements OnInit {
 
-  constructor() { }
+  orders:Array<Order>;
 
-  ngOnInit(): void {
+  constructor(private router:Router,  private s:OrdersService) { }
+
+  ngOnInit() {
+    this.s.getOrders()
+    .subscribe(resOrders =>this.orders=resOrders);
+    
+
   }
 
 }
