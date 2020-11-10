@@ -11,7 +11,6 @@ import { ProductComponent } from '../product/product.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { PopularComponent } from './popular/popular.component';
 import { ProfileModule } from '../profile/profile.module';
-import { ProductsearchComponent } from '../productsearch/productsearch.component';
 
 
 
@@ -24,8 +23,7 @@ import { ProductsearchComponent } from '../productsearch/productsearch.component
     EssaiComponent,
     PromotionComponent,
     PopularComponent,
-    ProductsearchComponent
-
+  
   ],
   imports: [
     HomeRoutingModule,

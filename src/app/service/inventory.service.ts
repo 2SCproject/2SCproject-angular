@@ -24,24 +24,16 @@ export class InventoryService {
 
 }
 getCategories(){
-  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
-    map(response=>response['_embedded'].categories)
-  );
+  return this.http.get<Category[]>("http://localhost:8081/categories")
 }
+getProductByName(name:string){
+  // return this.http.get<User>("http://localhost:3000/appUsers/"+id)
+ 
+  return this.http.get("http://localhost:8081/product/"+name)
+  
+ }
 
-getProductByname(name:string){
-  let headers= new HttpHeaders ({
-   'Content-Type': 'application/json',
- });
- let options = {
-   headers:headers
- }
-  console.log("done");
-  return this.http.get<Product[]>("http://localhost:8081/product/"+name,options)
-   .pipe(
-         map(response=>response)
-        );
- }
+
 
 
 }
