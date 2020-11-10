@@ -50,6 +50,8 @@ getProductByname(name:string){
  }
 
 
+
+
 }
 
 interface products{

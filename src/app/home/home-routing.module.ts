@@ -10,7 +10,7 @@ import{CategoryComponent} from  './category/category.component';
 import { OrderComponent } from '../order/order.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { PopularComponent } from './popular/popular.component';
-import { ProductsearchComponent } from '../productsearch/productsearch.component';
+
 
 
 
@@ -20,8 +20,8 @@ import { ProductsearchComponent } from '../productsearch/productsearch.component
                               {path: 'home/essai', component: EssaiComponent},
                               {path: '', component: PopularComponent},
                               {path: 'promotion', component: PromotionComponent},
-                              {path: 'category/:id', component: CategoryComponent},
-                              {path: 'product/search',component:ProductsearchComponent}
+                              {path: 'category/:id', component: CategoryComponent}
+                             
                               
 
                             ]
