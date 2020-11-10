@@ -11,8 +11,9 @@ export class InventoryService {
 
   constructor(private http: HttpClient) { }
   
+  
   getProducts(){
-    return this.http.get<Product[]>("https://f30e72d76e81.ngrok.io/products").pipe(
+    return this.http.get<Product[]>("http://localhost:8081/products").pipe(
       map(response=>response['_embedded'].products)
     );
   }
@@ -24,7 +25,7 @@ export class InventoryService {
 
 }
 getCategories(){
-  return this.http.get<Category[]>("https://f30e72d76e81.ngrok.io/categories").pipe(
+  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
     map(response=>response['_embedded'].categories)
   );
 }
@@ -36,18 +37,13 @@ getCatecory(){
 }
 
 getProductByname(name:string){
-  let headers= new HttpHeaders ({
-   'Content-Type': 'application/json',
- });
- let options = {
-   headers:headers
+  
+  return this.http.get("http://localhost:8081/product/"+name)
+   
  }
-  console.log("done");
-  return this.http.get<Product[]>("https://f30e72d76e81.ngrok.io/product/"+name,options)
-   .pipe(
-         map(response=>response)
-        );
- }
+ 
+ 
+
 
 
 

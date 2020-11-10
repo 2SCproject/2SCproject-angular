@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     console.log(value.value)
     if(!value.value) this.productsearch="";
     else{
-    this.s.getProductByName(value.value)
+    this.s.getProductByname(value.value)
     .subscribe(resCours =>
       {this.productsearch=resCours});
 
