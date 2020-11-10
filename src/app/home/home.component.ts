@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {InventoryService} from '../service/inventory.service';
-import {SharedataService} from '../service/sharedata.service'
 import { Category} from '../category';
 import {Product} from '../product'
 import{ActivatedRoute}from '@angular/router';
@@ -18,9 +17,9 @@ export class HomeComponent implements OnInit {
 
  
 
-  constructor(private route:ActivatedRoute,private router:Router, private s:InventoryService, private share:SharedataService) { }
+  constructor(private route:ActivatedRoute,private router:Router, private s:InventoryService) { }
   value:string;
-  productsearch:Array<Product>;
+  productsearch:any;
   message="welcome ikhlas";
   ngOnInit()  {  
   }
@@ -31,10 +30,23 @@ export class HomeComponent implements OnInit {
   }
 
   OnSubmitSearchProduct(value){
-    console.log("zone");
-    this.s.getProductByname(value)
-    .subscribe((resCours) =>this.productsearch=resCours);
-    console.log(value)
+    /*console.log("zone");
+    this.s.getProductByname(value.value)
+    .subscribe((resCours) =>{console.log(resCours),this.productsearch=resCours});
+    
+    console.log(value.value)
     this.share.setData(this.productsearch);
-    this.router.navigate(['/product/search'])}
+    console.log(this.productsearch)
+    this.router.navigate(['/product/search'])}*/
+    console.log(value.value)
+    if(!value.value) this.productsearch="";
+    else{
+    this.s.getProductByname(value.value)
+    .subscribe(resCours =>
+      {this.productsearch=resCours});
+
+  } 
+}
+    
+
 }
