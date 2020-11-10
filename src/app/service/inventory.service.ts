@@ -18,17 +18,17 @@ export class InventoryService {
     );
   }
   getProductById(id:string){
-    return this.http.get<Product>("https://f30e72d76e81.ngrok.io/products/"+id)
+    return this.http.get<Product>("http://localhost:8081/products/"+id)
     .pipe(
           map(response=>response)
          );
 
 }
 getCategories(){
-  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
-    map(response=>response['_embedded'].categories)
-  );
+  return this.http.get<Category[]>("http://localhost:8081/categories")
+
 }
+
 
 getCatecory(){
   return this.http.get<Category[]>("https://f30e72d76e81.ngrok.io/categories").pipe(
