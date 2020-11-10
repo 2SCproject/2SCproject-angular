@@ -18,7 +18,7 @@ export class InventoryService {
     );
   }
   getProductById(id:string){
-    return this.http.get<Product>("http://localhost:8081/products/"+id)
+    return this.http.get<Product>("http://localhost:8081/products"+id)
     .pipe(
           map(response=>response)
          );
