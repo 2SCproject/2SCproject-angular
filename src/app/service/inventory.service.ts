@@ -12,12 +12,12 @@ export class InventoryService {
   constructor(private http: HttpClient) { }
   
   getProducts(){
-    return this.http.get<Product[]>("http://localhost:8081/products").pipe(
+    return this.http.get<Product[]>("https://c73e8d53f16e.ngrok.io/ms-inventory/products").pipe(
       map(response=>response['_embedded'].products)
     );
   }
   getProductById(id:string){
-    return this.http.get<Product>("http://localhost:8081/products/"+id)
+    return this.http.get<Product>("https://c73e8d53f16e.ngrok.io/ms-inventory/products/"+id)
     .pipe(
           map(response=>response)
          );
@@ -25,6 +25,9 @@ export class InventoryService {
 }
 getCategories(){
   return this.http.get<Category[]>("http://localhost:8081/categories")
+  return this.http.get<Category[]>("https://c73e8d53f16e.ngrok.io/ms-inventory/categories").pipe(
+   map(response=>response['_embedded'].categories)
+  );
 }
 getProductByName(name:string){
   // return this.http.get<User>("http://localhost:3000/appUsers/"+id)
