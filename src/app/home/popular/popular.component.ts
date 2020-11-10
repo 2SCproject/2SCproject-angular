@@ -9,7 +9,7 @@ import { Product} from '../../product';
   styleUrls: ['./popular.component.css']
 })
 export class PopularComponent implements OnInit {
-  @Input() data:string;
+ 
   products: Array<Product>;
   
 

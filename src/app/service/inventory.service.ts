@@ -12,20 +12,26 @@ export class InventoryService {
   constructor(private http: HttpClient) { }
   
   getProducts(){
-    return this.http.get<Product[]>("https://c73e8d53f16e.ngrok.io/ms-inventory/products").pipe(
+    return this.http.get<Product[]>("https://f30e72d76e81.ngrok.io/products").pipe(
       map(response=>response['_embedded'].products)
     );
   }
   getProductById(id:string){
-    return this.http.get<Product>("https://c73e8d53f16e.ngrok.io/ms-inventory/products/"+id)
+    return this.http.get<Product>("https://f30e72d76e81.ngrok.io/products/"+id)
     .pipe(
           map(response=>response)
          );
 
 }
 getCategories(){
-  return this.http.get<Category[]>("https://c73e8d53f16e.ngrok.io/ms-inventory/categories").pipe(
+  return this.http.get<Category[]>("https://f30e72d76e81.ngrok.io/categories").pipe(
     map(response=>response['_embedded'].categories)
+  );
+}
+
+getCatecory(){
+  return this.http.get<Category[]>("https://f30e72d76e81.ngrok.io/categories").pipe(
+    map(response=>response['_embedded'].categorie)
   );
 }
 
@@ -37,7 +43,7 @@ getProductByname(name:string){
    headers:headers
  }
   console.log("done");
-  return this.http.get<Product[]>("http://localhost:8081/product/"+name,options)
+  return this.http.get<Product[]>("https://f30e72d76e81.ngrok.io/product/"+name,options)
    .pipe(
          map(response=>response)
         );

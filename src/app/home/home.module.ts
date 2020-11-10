@@ -12,6 +12,7 @@ import { PromotionComponent } from './promotion/promotion.component';
 import { PopularComponent } from './popular/popular.component';
 import { ProfileModule } from '../profile/profile.module';
 import { ProductsearchComponent } from '../productsearch/productsearch.component';
+import { CategoryComponent } from './category/category.component';
 
 
 
@@ -24,7 +25,8 @@ import { ProductsearchComponent } from '../productsearch/productsearch.component
     EssaiComponent,
     PromotionComponent,
     PopularComponent,
-    ProductsearchComponent
+    ProductsearchComponent,
+    CategoryComponent
 
   ],
   imports: [

@@ -21,16 +21,20 @@ export class MyordersComponent implements OnInit {
   constructor(private router:Router,  private s:OrdersService,private l:RegisterService ) { }
 
   ngOnInit() {
+
     console.log(this.l.userAuth)
     if(this.l.userAuth){
     this.s.getOrders(this.l.userAuth.id)
     .subscribe(resOrders => {
       console.log(resOrders)
+      /*
       this.id=resOrders.id
       this.totalPrice=resOrders.totalPrice
       this.userId=resOrders.userId
       this.orders=resOrders.userorders
+      */
     });
+  
   }
     
 

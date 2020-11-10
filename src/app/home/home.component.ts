@@ -13,8 +13,8 @@ import{ActivatedRoute}from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  categories=[];
-  products: Array<Category>;
+  
+  categories: Array<Category>;
 
  
 
@@ -24,8 +24,10 @@ export class HomeComponent implements OnInit {
   message="welcome ikhlas";
   ngOnInit()  {  
   }
+
   opencategories(){
-    this.s.getCategories().subscribe(resCategories => this.products=resCategories);
+    this.s.getCategories().subscribe(resCategories => this.categories=resCategories);
+    console.log(this.categories);
   }
 
   OnSubmitSearchProduct(value){

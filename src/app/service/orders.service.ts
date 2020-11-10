@@ -13,9 +13,9 @@ export class OrdersService  {
   constructor(private http: HttpClient) { }
 
   getOrders(useriD){
-    let url="https://d1fdf5eb3905.ngrok.io/order/"+useriD;
+    let url="https://ccfefbe4ee57.ngrok.io/order/"+useriD;
     console.log(url)
-    return this.http.get("https://d1fdf5eb3905.ngrok.io/order/"+useriD)
+    return this.http.get("https://ccfefbe4ee57.ngrok.io/order/"+useriD)
     
   }
 }
