@@ -13,32 +13,29 @@ export class InventoryService {
   
   
   getProducts(){
-    return this.http.get<Product[]>("http://localhost:8081/products").pipe(
+    return this.http.get<Product[]>("https://81b9b6d81d55.ngrok.io/products").pipe(
       map(response=>response['_embedded'].products)
     );
   }
   getProductById(id:string){
-    return this.http.get<Product>("https://f30e72d76e81.ngrok.io/products/"+id)
+    return this.http.get<Product>("https://81b9b6d81d55.ngrok.io//products/"+id)
     .pipe(
           map(response=>response)
          );
 
 }
 getCategories(){
-  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
-    map(response=>response['_embedded'].categories)
-  );
+  return this.http.get<Category[]>("https://81b9b6d81d55.ngrok.io/categories")
+  
 }
 
-getCatecory(){
-  return this.http.get<Category[]>("https://f30e72d76e81.ngrok.io/categories").pipe(
-    map(response=>response['_embedded'].categorie)
-  );
+getCatecory(id){
+  return this.http.get<Category[]>("https://81b9b6d81d55.ngrok.io/categories/"+id)
 }
 
 getProductByname(name:string){
   
-  return this.http.get("http://localhost:8081/product/"+name)
+  return this.http.get("https://81b9b6d81d55.ngrok.io/product/"+name)
    
  }
  

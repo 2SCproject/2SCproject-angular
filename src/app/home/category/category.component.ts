@@ -20,8 +20,11 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
 
-    this.s.getProductById(id)
-    .subscribe(res=>{this.name=res.name;console.log(res)});
+    var id=this.route.snapshot.paramMap.get('id');
+    this.s.getCatecory(id)
+    .subscribe(res=>{this.name=res.name;
+      this.products=res.products
+      console.log(this.products)});
       
     
     this.s.getProducts().subscribe(resProducts => this.products=resProducts);
