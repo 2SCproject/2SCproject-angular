@@ -25,8 +25,16 @@ constructor(private router:Router,private l:RegisterService) { };
   OnSubmitAddUsers(user : User){
     console.log(user);
     this.l.addUser(user)
-             .subscribe(resnextCour=>this.users.push(resnextCour));
-             this.router.navigate(['/profile']);      
+             .subscribe(resnextCour=>{
+              
+              console.log(resnextCour)
+              this.l.addCart(resnextCour.id)
+               this.users.push(resnextCour)});
+
+               this.router.navigate(['/profile']);
+                 
+
+    
   }
 
   onLogin(dataForm ){
@@ -36,6 +44,8 @@ constructor(private router:Router,private l:RegisterService) { };
       let jwt=res.headers.get('Authorization')
       this.l.saveToken(jwt)
     },err=>{})
+    console.log("login")
+    this.router.navigate(['/']);
   }
 
   isAdmin(){

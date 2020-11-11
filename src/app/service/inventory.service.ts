@@ -11,6 +11,7 @@ export class InventoryService {
 
   constructor(private http: HttpClient) { }
   
+  
   getProducts(){
     return this.http.get<Product[]>("http://localhost:8081/products").pipe(
       map(response=>response['_embedded'].products)
@@ -28,19 +29,19 @@ getCategories(){
 }
 
 getProductByname(name:string){
-  let headers= new HttpHeaders ({
-   'Content-Type': 'application/json',
- });
- let options = {
-   headers:headers
- }
-  console.log("done");
-  return this.http.get<Product[]>("http://localhost:8081/product/"+name,options)
-   .pipe(
-         map(response=>response)
-        );
+  
+  return this.http.get("http://localhost:8081/product/"+name)
+   
  }
 
+ getCatecory(id){
+   return this.http.get("http://localhost:8081/gategory/"+id)
+ }
+
+ getPromotions(){
+  return this.http.get("http://localhost:8081/getinpromotions/")
+ }
+ 
 
 }
 

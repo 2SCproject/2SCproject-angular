@@ -57,10 +57,10 @@
 </nav>
 <!--panier-->
 <div class="container mt-5">
-    <h1>NEWS</h1>
+    <h1>Cart</h1>
     <div class="row" >
       <div style="width: 70%;">
-        <div class="card">
+        <div class="card" *ngFor="let i of items">
           <div class="row">
               <div class="col-md-4 ">
                 <img class="image-fluid" src="https://www.media-rdc.com/medias/8cdf137932b8323caf9b2dcbabecd549/p_580x580/meuble-tv-gris-bois-moderne-zd1-z.jpg" alt="Card image" style="width:100%;height: 250px;">
@@ -68,9 +68,9 @@
               <div class="card-body col-md-8">
                 <div class="mt-4">
                     <input class="checkbox" type="checkbox">     
-                    <h4 class="card-title " >price  </h4>
-                </div>
-                <p class="card-text"> Excepteur occacat cupidata Entire home/apt, 1 bed</p>
+                    <h4 class="card-title " >1 {{i.product.name}}  </h4>
+                </div>descreption
+                <p class="card-text"> {{i.product.descreption}} , {{i.product.price}}$</p>
                 <div class="star">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -78,91 +78,14 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <div class="float-right" >
-                      <a href="#" class="btn delete ">DELETE</a>
-                      <a href="#" class="btn buy">BUY NOW</a>
+                      <a href="#" class="btn buy">DELETE</a>
                     </div>
                    </div>
               </div>
           </div>
       </div>
       <br>
-      <div class="card">
-        <div class="row">
-            <div class="col-md-4">
-              <img class="image-fluid" src="https://www.media-rdc.com/medias/8cdf137932b8323caf9b2dcbabecd549/p_580x580/meuble-tv-gris-bois-moderne-zd1-z.jpg" alt="Card image" style="width:100%;height: 250px;">
-            </div>
-            <div class="card-body col-md-8">
-              <div class="mt-4">
-                <input class="checkbox" type="checkbox">     
-                <h4 class="card-title"  >price  </h4>
-              </div>
-                <p class="card-text"> Excepteur occacat cupidata Entire home/apt, 1 bed</p>
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                    <div class="float-right" >
-                      <a href="#" class="btn delete ">DELETE</a>
-                      <a href="#" class="btn buy">BUY NOW</a>
-                    </div>
-                   </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="card">
-        <div class="row">
-            <div class=" col-md-4">
-              <img class="image-fluid" src="https://www.media-rdc.com/medias/8cdf137932b8323caf9b2dcbabecd549/p_580x580/meuble-tv-gris-bois-moderne-zd1-z.jpg" alt="Card image" style="width:100%;height: 250px;">
-            </div>
-            <div class="card-body col-md-8">
-              <div class="mt-4">
-                <input class="checkbox" type="checkbox">     
-                <h4 class="card-title"  >price  </h4>
-              </div>
-                <p class="card-text"> Excepteur occacat cupidata Entire home/apt, 1 bed</p>
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                    <div class="float-right" >
-                      <a href="#" class="btn delete ">DELETE</a>
-                      <a href="#" class="btn buy">BUY NOW</a>
-                    </div>
-                   </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="card">
-        <div class="row">
-            <div class="col-md-4">
-              <img class="image-fluid" src="https://www.media-rdc.com/medias/8cdf137932b8323caf9b2dcbabecd549/p_580x580/meuble-tv-gris-bois-moderne-zd1-z.jpg" alt="Card image" style="width:100%;height: 250px;">
-            </div>
-            <div class="card-body col-md-8">
-              <div class="mt-4">
-                <input class="checkbox" type="checkbox">     
-                <h4 class="card-title"  >price  </h4>
-              </div>
-                <p class="card-text"> Excepteur occacat cupidata Entire home/apt, 1 bed</p>
-                <div class="star">
-                 <i class="fa fa-star" aria-hidden="true"></i>
-                 <i class="fa fa-star" aria-hidden="true"></i>
-                 <i class="fa fa-star" aria-hidden="true"></i>
-                 <i class="fa fa-star" aria-hidden="true"></i>
-                 <i class="fa fa-star-o" aria-hidden="true"></i>
-                 <div class="float-right" >
-                   <a href="#" class="btn delete ">DELETE</a>
-                   <a href="#" class="btn buy">BUY NOW</a>
-                 </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      
     <br>
     
                 
@@ -176,10 +99,10 @@
               <h4 class="card-title mt-4">Summary of orders</h4>
               <hr/>
               <h6 >total</h6>
-              <p class="float-right" style="margin-top: -25px">100$</p>
+              <p class="float-right" style="margin-top: -25px">{{total}}$</p>
               <hr/>
                   <div>
-                    <a routerLink="/order" class="btn buy" style="margin-left:23%">BUY NOW</a>
+                    <a routerLink="/order/{{id}}" class="btn buy" style="margin-left:23%">BUY NOW</a>
                   </div>
       </div>
     </div>

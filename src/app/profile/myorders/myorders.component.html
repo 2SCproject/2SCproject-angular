@@ -5,10 +5,11 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">On hold</th>
-        <th scope="col">Processing</th>
+        <th scope="col">Pending</th>
+        <th scope="col">On hold </th>
         <th scope="col">Shipped</th>
         <th scope="col">Delivered</th>
+        <th scope="col">Closed</th>
       </tr>
     </thead>
     
@@ -18,6 +19,7 @@
         <td>1</td>
         <td>1</td>
         <td>0</td>
+        <td>3</td>
       </tr>
     </tbody>
   </table>
@@ -25,7 +27,9 @@
   </div>
 
   <hr>
-  <div class="row" style="height: 260px;">
+
+  <div class="container-fluid">
+  <div class="row" style="height: 260px;" *ngFor="let o of orders">
     <div class="col-3" >
            <img src="assets/4.jpg" width="260px" >
     </div>
@@ -33,11 +37,11 @@
     
      <div class="col-9 " >
      
-      <p> april 19,2020</p>
-      <h6> Order status</h6>
+      <p> {{o.date}}</p>
+      <h6>{{o.orderstatus}}</h6>
       <br>
       <p> Order total</p>
-      <h6> $483.99 </h6>
+      <h6>{{totalPrice}} $ </h6>
       <br>
        <p>also in this order</p>
        <div class="row" style="height: 60px;">
@@ -50,33 +54,11 @@
 
   </div>
 </div> 
+
 <br><br><br>
-
-<div class="row" style="height: 260px;">
-  <div class="col-3" >
-         <img src="assets/4.jpg" width="260px" >
-  </div>
-
-  
-   <div class="col-9 " >
-   
-    <p> april 19,2020</p>
-    <h6> Order status</h6>
-    <br>
-    <p> Order total</p>
-    <h6> $483.99 </h6>
-    <br>
-     <p>also in this order</p>
-     <div class="row" style="height: 60px;">
-       <div class="col-1"><img src="assets/min.jpg" class="min"> </div>
-       <div class="col-1"><img src="assets/min.jpg" class="min"> </div>
-       <div class="col-1"><img src="assets/min.jpg" class="min"> </div>
-       <div class="col-1"><img src="assets/min.jpg" class="min"> </div>
-  
-   </div>
 
 </div>
-</div> 
-<br><br><br>
+
+
 
 

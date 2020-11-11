@@ -28,16 +28,31 @@ export class RegisterService {
     let options = {
         headers:headers
     }
-    return this.http.post<User[]>("http://localhost:3000/register",JSON.stringify(user),options)
-    .pipe(
-        map(response=>response)
-    );   
+    
+    
+    
+    
+
+  return this.http.post<User[]>("http://localhost:3000/register",JSON.stringify(user),options)
 }
 
+addCart(user){
+  console.log(user)
+  this.http.post("http://localhost:9000/cart",{"userId":user,"totalPrice":0}).subscribe(res=>
+  console.log(res))
+}
 
   getUser(){
     return this.http.get("http://localhost:3000/user/" + this.username);
   }
+  getUserById(id:string){
+    return this.http.get<User>("http://localhost:3000/appUsers/" +id)
+    .pipe(
+      map(response=>response)
+     );
+  }
+ 
+
 
 
 public login(data){
@@ -61,6 +76,8 @@ parseJWT(){
   this.getUser().subscribe(res=>{
     console.log(res)
     this.userAuth=res
+    console.log("ggg")
+    console.log(this.userAuth)
   })
   this.roles=objJWT.roles
 
