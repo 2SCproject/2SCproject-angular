@@ -22,7 +22,7 @@ export class PanierComponent implements OnInit {
     this.http.get("http://localhost:9000/cart/"+this.u.userAuth.id).subscribe(res=>
     {
       console.log(res)
-      this.items=res.items
+     this.items=res.items
       this.total=res.totalPrice
       this.id=res.id
     
