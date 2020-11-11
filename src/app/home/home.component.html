@@ -137,11 +137,7 @@
         <li  role="presentation" class="active"><a  routerLink="/promotion">Promotion</a></li>
         <li role="presentation"><a routerLink="/news">News</a></li>
         <li role="presentation"><a routerLink="">Popular</a></li>
-        <li role="presentation"><a href="#">Category1</a></li>
-        <li role="presentation"><a href="#">Category2</a></li>
-        <li role="presentation"><a href="#">Category3</a></li>
-        <li role="presentation"><a href="#">Category4</a></li>
-        <li role="presentation"><a href="#">Category5</a></li>
+        <li role="presentation" *ngFor="let c of categories"><a href="#">{{c.name}}</a></li>
       </ul>
     </div>
     
@@ -156,8 +152,9 @@
   
 </div>
 
+<br>
 
-<!--pagination-->
+<!--pagination
 
 <div >
   <nav aria-label="Page navigation example" >
@@ -181,7 +178,7 @@
       </li>
     </ul>
   </nav>
-  </div>
+  </div>-->
 
   <!-- Footer -->
 <footer class="page-footer font-small bg-dark pt-4">

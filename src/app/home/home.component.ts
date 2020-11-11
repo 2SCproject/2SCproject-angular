@@ -21,8 +21,12 @@ export class HomeComponent implements OnInit {
   value:string;
   Products:Array<Product>;
   ngOnInit()  {
-  
-    
+    console.log("22")
+    this.s.getCategories().subscribe(resCategories =>{
+
+     this.categories=resCategories;
+    console.log(this.categories)
+    })
   
   }
   opencategories(){

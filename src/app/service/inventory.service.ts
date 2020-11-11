@@ -24,9 +24,7 @@ export class InventoryService {
 
 }
 getCategories(){
-  return this.http.get<Category[]>("http://localhost:8081/categories").pipe(
-    map(response=>response['_embedded'].categories)
-  );
+  return this.http.get<Category[]>("http://localhost:8081/gategories")
 }
 
 getProductByname(name:string){
